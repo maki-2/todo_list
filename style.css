@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap');
+:root {
+    --main-bg-color: #f9f9f9;
+    --main-container-color: #F0E8D8;
+    --title-color: #333;
+    --button-color: #3B5A45;
+    --font-color:#fff;
+    --title-font: "DM Serif Text", serif;
+    --text-font:  "Libertinus Mono", monospace;
+  }
+  
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-color);
+  }
+
+header{
+    height: 10rem; 
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),/* dark effect */
+    url('picture/header_bg.jpg') center / cover no-repeat;
+}
+
+#main-container{
+    width: 350px;
+    margin: -50px auto 0 auto; /* Move it upward and center horizontally */
+    background-color: var(--main-container-color);
+    position:relative;
+    flex-direction: column;
+    padding: 20px;
+    align-items:center;
+    z-index: 2; /* make sure it's on top */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* optional for depth */
+    border-radius: 10px;
+}
+
+#main-container h1{
+    font-family: var(--title-font);
+    color: var(--title-color);
+    text-align: center;
+   
+}
+
+#todo-list {
+  list-style: none; /* ❌ Removes bullets */
+  padding: 0;
+  margin: 0;
+}
+
+#task-input{
+  align-items: center;
+  margin-left: 60px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 7px;
+  font-family: var(--text-font);
+  font-size: 15px;
+}
+
+#task-button{
+  border-radius:5px;
+  padding: 7px;
+  background-color: var(--button-color);
+  color:var(--font-color);
+  font-weight: bold;
+}
+
+#task-button:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+#main-container ul{
+  align-items:center;
+  padding: 0 50px 0 0;
+  margin-left: 60px;
+  font-family: var(--text-font);
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+#delete-button{
+  display: block;            /* Ensures it behaves like a block element */
+  margin: 20px auto;         /* Top-bottom: 20px, Left-right: auto */
+  align-items:center;
+  border-radius:5px;
+  padding: 7px;
+  background-color: var(--button-color);
+  color:var(--font-color);
+  font-weight: bold;
+}
+
+#delete-button:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
